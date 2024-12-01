@@ -9,7 +9,7 @@ import { color } from "three/webgpu";
     const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
 
-    // ========== RENDERER ==================
+    // ========== RENDERER ================
     const renderer = new THREE.WebGLRenderer();
     renderer.setSize( window.innerHeight, window.innerWidth );
     renderer.setAnimationLoop( animate );
@@ -20,10 +20,10 @@ import { color } from "three/webgpu";
     // ========== ICOSAHERDRION ===============
     const  geometry = new THREE.IcosahedronGeometry( 14, 5 );
 
+    const texture = new THREE.MeshBasicMaterial( { color: 0xFFF000 } );
+
     const hemiLight = new THREE.HemisphereLight( 0xffffff, 0x000000, 1);
     scene.add(hemiLight);
-
-    const texture = new THREE.MeshBasicMaterial( { color: 0xFFF000 } );
 
     const box = new THREE.Mesh( geometry, texture );
     scene.add(box);
