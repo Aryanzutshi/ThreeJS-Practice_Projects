@@ -18,7 +18,7 @@ import { color } from "three/webgpu";
 
 
     // ========== ICOSAHERDRION ===============
-    const  geometry = new THREE.IcosahedronGeometry( 14, 5 );
+    const  geometry = new THREE.IcosahedronGeometry( 12, 10 );
 
     const texture = new THREE.MeshBasicMaterial( { color: 0xFFF000 } );
 
