@@ -18,15 +18,17 @@ import { color } from "three/webgpu";
 
 
     // ========== ICOSAHERDRION ===============
-    const  geometry = new THREE.IcosahedronGeometry( 12, 10 );
-
     const texture = new THREE.MeshBasicMaterial( { color: 0xFFF000 } );
+
+    
+    const  geometry = new THREE.IcosahedronGeometry( 12, 10 );
+    
+    const box = new THREE.Mesh( geometry, texture );
+    scene.add(box);
 
     const hemiLight = new THREE.HemisphereLight( 0xffffff, 0x000000, 1);
     scene.add(hemiLight);
 
-    const box = new THREE.Mesh( geometry, texture );
-    scene.add(box);
 
     // ========== ANiMATIONS ====================
     function animate() {
