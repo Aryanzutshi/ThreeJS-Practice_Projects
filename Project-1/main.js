@@ -18,10 +18,10 @@ import { color } from "three/webgpu";
 
 
     // ========== ICOSAHERDRION ===============
-    const texture = new THREE.MeshBasicMaterial( { color: 0xFFF000 } );
-
-    
     const  geometry = new THREE.IcosahedronGeometry( 12, 10 );
+
+    const texture = new THREE.MeshBasicMaterial( { color: 0xFFF000 } );
+    
     
     const box = new THREE.Mesh( geometry, texture );
     scene.add(box);
